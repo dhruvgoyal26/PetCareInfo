@@ -4,48 +4,79 @@ import { Alert, Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-
 
 export default function NearbyPetCare() {
     const [location, setLocation] = useState<Location.LocationObject | null>(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         (async () => {
             const { status } = await Location.requestForegroundPermissionsAsync();
             if (status !== 'granted') {
                 Alert.alert('Permission denied', 'Location access is required');
+                setLoading(false);
                 return;
             }
 
-            const currentLocation = await Location.getCurrentPositionAsync({});
-            setLocation(currentLocation);
+            try {
+                // ✅ STEP 1: Instant cached location
+                let currentLocation = await Location.getLastKnownPositionAsync();
+
+                // ✅ STEP 2: Live GPS only if cache missing
+                if (!currentLocation) {
+                    currentLocation = await Location.getCurrentPositionAsync({
+                        accuracy: Location.Accuracy.Balanced,
+                    });
+                }
+
+                setLocation(currentLocation);
+            } catch (e) {
+                Alert.alert('Location error', 'Unable to get location');
+            } finally {
+                setLoading(false);
+            }
         })();
     }, []);
 
     const openGoogleMaps = async () => {
-        if (!location) return;
+        if (!location) {
+            Alert.alert('Please wait', 'Fetching your location…');
+            return;
+        }
 
         const { latitude, longitude } = location.coords;
-        const url = `https://www.google.com/maps/search/veterinary+clinic/@${latitude},${longitude},15z`;
 
-        const supported = await Linking.canOpenURL(url);
-        if (supported) {
-            Linking.openURL(url);
+        const geoUrl = `geo:${latitude},${longitude}?q=veterinary+clinic`;
+        const webUrl = `https://www.google.com/maps/search/veterinary+clinic/@${latitude},${longitude},15z`;
+
+        try {
+            const canOpenGeo = await Linking.canOpenURL(geoUrl);
+            await Linking.openURL(canOpenGeo ? geoUrl : webUrl);
+        } catch {
+            Alert.alert('Error', 'Unable to open Google Maps');
         }
     };
-
-
 
     return (
         <View style={styles.container}>
             <Text style={styles.header}>Nearby Pet Care</Text>
 
             <Text style={styles.desc}>
-                Find veterinary clinics and pet hospitals near your location using Google Maps.
+                Find veterinary clinics and pet hospitals near your location.
             </Text>
 
-            <TouchableOpacity style={styles.button} onPress={openGoogleMaps}>
-                <Text style={styles.buttonText}>Open Google Maps</Text>
+            <TouchableOpacity
+                style={[
+                    styles.button,
+                    (loading || !location) && { opacity: 0.6 },
+                ]}
+                disabled={loading || !location}
+                onPress={openGoogleMaps}
+            >
+                <Text style={styles.buttonText}>
+                    {loading ? 'Getting location…' : 'Open Google Maps'}
+                </Text>
             </TouchableOpacity>
 
             <Text style={styles.note}>
-                Uses your device’s location to show real nearby services.
+                Uses your device’s location to show nearby services.
             </Text>
         </View>
     );
