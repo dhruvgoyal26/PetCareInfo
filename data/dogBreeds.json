@@ -1,0 +1,353 @@
+{
+    "metadata": {
+        "description": "Dog breed database for pet care, health issues, diet, and vaccination info.",
+        "version": "1.0",
+        "disclaimer": "This data is for informational purposes only. Always consult a licensed veterinarian for medical advice, diagnosis, or treatment."
+    },
+    "general_guidelines": {
+        "vaccination_schedule": {
+            "core_vaccines": [
+                {
+                    "name": "Rabies",
+                    "frequency": "1-year or 3-year intervals (depending on local laws)",
+                    "importance": "Mandatory by law in most regions; fatal if contracted."
+                },
+                {
+                    "name": "DHPP (Distemper, Hepatitis, Parvovirus, Parainfluenza)",
+                    "frequency": "Puppy series (6, 10, 14 weeks), then 1 year later, then every 3 years.",
+                    "importance": "Protects against highly contagious and deadly viral diseases."
+                }
+            ],
+            "non_core_vaccines": [
+                {
+                    "name": "Bordetella (Kennel Cough)",
+                    "frequency": "Every 6-12 months",
+                    "indication": "Required for boarding, grooming, or dogs that socialize often."
+                },
+                {
+                    "name": "Leptospirosis",
+                    "frequency": "Annual",
+                    "indication": "For dogs exposed to wildlife, rivers, or rodent-infested areas."
+                },
+                {
+                    "name": "Lyme Disease",
+                    "frequency": "Annual",
+                    "indication": "For dogs in tick-endemic regions."
+                }
+            ]
+        },
+        "toxic_foods": [
+            "Chocolate",
+            "Xylitol (artificial sweetener)",
+            "Grapes and Raisins",
+            "Onions and Garlic",
+            "Macadamia Nuts",
+            "Alcohol",
+            "Cooked Bones (splinter risk)"
+        ]
+    },
+    "breed_specific_data": [
+        {
+            "id": 1,
+            "breed": "Labrador Retriever",
+            "size_category": "Large",
+            "lifespan": "10-12 years",
+            "dietary_needs": {
+                "food_type": "Large breed formula (controlled calories)",
+                "feeding_schedule": "2 meals per day",
+                "nutritional_focus": "Glucosamine/Chondroitin for joints; restricted fats to prevent obesity.",
+                "special_notes": "Prone to overeating. Use slow-feeder bowls to prevent Bloat (GDV)."
+            },
+            "health_issues": {
+                "genetic_predispositions": [
+                    "Hip & Elbow Dysplasia",
+                    "Obesity",
+                    "Progressive Retinal Atrophy (PRA)",
+                    "Exercise Induced Collapse (EIC)"
+                ],
+                "common_allergies": [
+                    "Chicken",
+                    "Beef",
+                    "Grains"
+                ],
+                "watch_signs": "Limping, excessive weight gain, cloudiness in eyes."
+            },
+            "care_info": {
+                "exercise_needs": "High (60+ mins/day). Loves swimming and fetch.",
+                "grooming": "Moderate. High shedding (double coat); brush weekly.",
+                "training_difficulty": "Low (Eager to please)"
+            }
+        },
+        {
+            "id": 2,
+            "breed": "French Bulldog",
+            "size_category": "Small",
+            "lifespan": "10-12 years",
+            "dietary_needs": {
+                "food_type": "Grain-free or sensitive stomach formula",
+                "feeding_schedule": "2-3 small meals per day",
+                "nutritional_focus": "High quality protein, low gas-producing ingredients.",
+                "special_notes": "Prone to flatulence and obesity. Monitor weight strictly to reduce breathing strain."
+            },
+            "health_issues": {
+                "genetic_predispositions": [
+                    "Brachycephalic Airway Syndrome (Breathing difficulties)",
+                    "IVDD (Intervertebral Disc Disease)",
+                    "Skin Fold Dermatitis",
+                    "Heat Stroke"
+                ],
+                "common_allergies": [
+                    "Environmental (pollen, grass)",
+                    "Poultry"
+                ],
+                "watch_signs": "Loud snorting, difficulty breathing in heat, skin redness in folds."
+            },
+            "care_info": {
+                "exercise_needs": "Low. Short walks in cool weather only.",
+                "grooming": "Low coat maintenance, but facial folds must be cleaned daily.",
+                "training_difficulty": "Moderate (Can be stubborn)"
+            }
+        },
+        {
+            "id": 3,
+            "breed": "German Shepherd",
+            "size_category": "Large",
+            "lifespan": "9-13 years",
+            "dietary_needs": {
+                "food_type": "High-performance/Active breed formula",
+                "feeding_schedule": "2 meals per day",
+                "nutritional_focus": "High protein (22%+), moderate fat, digestive support (prebiotics).",
+                "special_notes": "Sensitive digestion. Avoid rapid exercise after eating to prevent Bloat."
+            },
+            "health_issues": {
+                "genetic_predispositions": [
+                    "Hip & Elbow Dysplasia",
+                    "Degenerative Myelopathy",
+                    "Bloat (Gastric Dilatation-Volvulus)",
+                    "Exocrine Pancreatic Insufficiency (EPI)"
+                ],
+                "common_allergies": [
+                    "Dairy",
+                    "Wheat",
+                    "Soy"
+                ],
+                "watch_signs": "Weakness in hind legs, digestive upset, sudden abdominal swelling."
+            },
+            "care_info": {
+                "exercise_needs": "Very High (90+ mins/day). Needs mental stimulation.",
+                "grooming": "High. Heavy shedding year-round.",
+                "training_difficulty": "Low (Highly intelligent)"
+            }
+        },
+        {
+            "id": 4,
+            "breed": "Golden Retriever",
+            "size_category": "Large",
+            "lifespan": "10-12 years",
+            "dietary_needs": {
+                "food_type": "Large breed adult formula",
+                "feeding_schedule": "2 meals per day",
+                "nutritional_focus": "Heart health (Taurine), Skin & Coat (Omega-3/6).",
+                "special_notes": " prone to obesity. Avoid grain-free diets unless medically necessary (link to DCM heart issues)."
+            },
+            "health_issues": {
+                "genetic_predispositions": [
+                    "Cancer (Hemangiosarcoma, Lymphoma)",
+                    "Hip Dysplasia",
+                    "Hypothyroidism",
+                    "Subaortic Stenosis (Heart condition)"
+                ],
+                "common_allergies": [
+                    "Pollen",
+                    "Dust mites",
+                    "Flea bites"
+                ],
+                "watch_signs": "Lumps/bumps under skin, lethargy, skin hot spots."
+            },
+            "care_info": {
+                "exercise_needs": "High (60+ mins/day).",
+                "grooming": "High. Requires regular brushing to prevent matting.",
+                "training_difficulty": "Low"
+            }
+        },
+        {
+            "id": 5,
+            "breed": "Dachshund",
+            "size_category": "Small",
+            "lifespan": "12-16 years",
+            "dietary_needs": {
+                "food_type": "Small breed formula (weight management)",
+                "feeding_schedule": "2 meals per day",
+                "nutritional_focus": "Calcium/Phosphorus balance for bone health.",
+                "special_notes": "Strict weight control is critical to protect the spine."
+            },
+            "health_issues": {
+                "genetic_predispositions": [
+                    "IVDD (Intervertebral Disc Disease - Back problems)",
+                    "Obesity",
+                    "Dental Disease",
+                    "Patellar Luxation"
+                ],
+                "common_allergies": [
+                    "Corn",
+                    "Wheat"
+                ],
+                "watch_signs": "Refusal to jump/climb stairs, paralysis, bad breath."
+            },
+            "care_info": {
+                "exercise_needs": "Moderate. Avoid jumping on/off furniture.",
+                "grooming": "Varies by coat (Smooth: Low, Long/Wire: Moderate).",
+                "training_difficulty": "Moderate (Stubborn)"
+            }
+        },
+        {
+            "id": 6,
+            "breed": "Poodle (Standard/Toy)",
+            "size_category": "Varies",
+            "lifespan": "12-15 years",
+            "dietary_needs": {
+                "food_type": "Size-specific formula (Toy vs Standard)",
+                "feeding_schedule": "2-3 meals per day",
+                "nutritional_focus": "Balanced fats for skin/coat health.",
+                "special_notes": "Toy poodles are prone to hypoglycemia (low blood sugar) as puppies."
+            },
+            "health_issues": {
+                "genetic_predispositions": [
+                    "Addison's Disease",
+                    "Bloat (Standard Poodles)",
+                    "Cushing's Disease",
+                    "Progressive Retinal Atrophy"
+                ],
+                "common_allergies": [
+                    "Preservatives",
+                    "Dyes in cheap food"
+                ],
+                "watch_signs": "Vomiting/shaking (Addison's), hair loss, cloudy eyes."
+            },
+            "care_info": {
+                "exercise_needs": "High. Very active and athletic.",
+                "grooming": "Very High. Hypoallergenic but requires professional grooming every 4-6 weeks.",
+                "training_difficulty": "Low (One of the smartest breeds)"
+            }
+        },
+        {
+            "id": 7,
+            "breed": "Rottweiler",
+            "size_category": "Large/Giant",
+            "lifespan": "8-10 years",
+            "dietary_needs": {
+                "food_type": "Large breed formula",
+                "feeding_schedule": "2 meals per day",
+                "nutritional_focus": "Protein for muscle mass, Taurine for heart health.",
+                "special_notes": "Prone to rapid growth; ensure puppy food has correct calcium ratio to prevent bone deformities."
+            },
+            "health_issues": {
+                "genetic_predispositions": [
+                    "Hip Dysplasia",
+                    "Osteosarcoma (Bone Cancer)",
+                    "Aortic Stenosis",
+                    "Parvovirus (Breed is highly susceptible)"
+                ],
+                "common_allergies": [
+                    "Beef",
+                    "Soy"
+                ],
+                "watch_signs": "Limping, coughing, fainting."
+            },
+            "care_info": {
+                "exercise_needs": "High. Needs strong leadership and socialization.",
+                "grooming": "Low. Occasional brushing.",
+                "training_difficulty": "Moderate (Intelligent but dominant)"
+            }
+        },
+        {
+            "id": 8,
+            "breed": "Beagle",
+            "size_category": "Medium",
+            "lifespan": "12-15 years",
+            "dietary_needs": {
+                "food_type": "Weight management formula",
+                "feeding_schedule": "2 meals per day",
+                "nutritional_focus": "Fiber to keep them full without excess calories.",
+                "special_notes": "Extreme food drive. Will eat anything (garbage gut risk). secure trash cans."
+            },
+            "health_issues": {
+                "genetic_predispositions": [
+                    "Obesity",
+                    "Ear Infections",
+                    "Epilepsy",
+                    "Hypothyroidism"
+                ],
+                "common_allergies": [
+                    "Grains",
+                    "Pollen"
+                ],
+                "watch_signs": "Head shaking (ear infection), seizure activity, unexplained weight gain."
+            },
+            "care_info": {
+                "exercise_needs": "High. Scent hound—needs sniffing walks.",
+                "grooming": "Low. Weekly brushing.",
+                "training_difficulty": "Moderate (Distracted by scents)"
+            }
+        },
+        {
+            "id": 9,
+            "breed": "Yorkshire Terrier",
+            "size_category": "Toy",
+            "lifespan": "13-16 years",
+            "dietary_needs": {
+                "food_type": "Small breed formula (kibble helps clean teeth)",
+                "feeding_schedule": "3-4 small meals (prone to hypoglycemia)",
+                "nutritional_focus": "High calorie density for small stomach.",
+                "special_notes": "Extremely prone to dental decay; dry food is preferred over wet."
+            },
+            "health_issues": {
+                "genetic_predispositions": [
+                    "Luxating Patella (Knee cap dislocation)",
+                    "Collapsing Trachea",
+                    "Dental Disease",
+                    "Portosystemic Shunt (Liver)"
+                ],
+                "common_allergies": [
+                    "Medications",
+                    "Insect bites"
+                ],
+                "watch_signs": "Honking cough (trachea), skipping step (knees), bad breath."
+            },
+            "care_info": {
+                "exercise_needs": "Moderate. Indoor play is often sufficient.",
+                "grooming": "High. Hair grows continuously; daily brushing required.",
+                "training_difficulty": "Moderate (Difficult to housebreak)"
+            }
+        },
+        {
+            "id": 10,
+            "breed": "Siberian Husky",
+            "size_category": "Medium/Large",
+            "lifespan": "12-15 years",
+            "dietary_needs": {
+                "food_type": "High protein/High fat (Working breed formula)",
+                "feeding_schedule": "2 meals per day",
+                "nutritional_focus": "Zinc (Breed is prone to Zinc Deficiency Dermatosis).",
+                "special_notes": "Metabolism is efficient; they eat less than other dogs their size."
+            },
+            "health_issues": {
+                "genetic_predispositions": [
+                    "Cataracts (Juvenile)",
+                    "Zinc Deficiency",
+                    "Hip Dysplasia",
+                    "Hypothyroidism"
+                ],
+                "common_allergies": [
+                    "None specific, generally hardy"
+                ],
+                "watch_signs": "Crusty skin around eyes/mouth (Zinc issue), cloudiness in eyes."
+            },
+            "care_info": {
+                "exercise_needs": "Very High. Born to run; escape artist if bored.",
+                "grooming": "High. Heavy seasonal shedding (blows coat twice a year).",
+                "training_difficulty": "High (Independent/Stubborn)"
+            }
+        }
+    ]
+}

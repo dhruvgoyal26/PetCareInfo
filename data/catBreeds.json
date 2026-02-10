@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "description": "Comprehensive cat breed database including health, diet, care, and lifestyle compatibility.",
+    "version": "1.1",
+    "disclaimer": "This data is for informational purposes only. Always consult a licensed veterinarian for medical advice."
+  },
+  "general_guidelines": {
+    "vaccination_schedule": {
+      "core_vaccines": [
+        {
+          "name": "Rabies",
+          "frequency": "1-year or 3-year intervals",
+          "importance": "Mandatory by law; fatal if contracted."
+        },
+        {
+          "name": "FVRCP (Distemper)",
+          "frequency": "Kitten series, then every 3 years",
+          "importance": "Protects against deadly respiratory/digestive viruses."
+        }
+      ],
+      "non_core_vaccines": [
+        {
+          "name": "FeLV (Feline Leukemia)",
+          "frequency": "Annual",
+          "indication": "Highly recommended for outdoor cats."
+        }
+      ]
+    },
+    "neutering_advice": {
+      "recommended_age": "5-6 months",
+      "benefits": [
+        "Prevents unwanted litters and overpopulation",
+        "Reduces territorial spraying and aggression",
+        "Eliminates risk of uterine/testicular cancers"
+      ],
+      "note": "Consult your vet; some large breeds (like Maine Coons) may benefit from waiting slightly longer."
+    },
+    "toxic_foods": [
+      "Lilies (Deadly)",
+      "Onions/Garlic",
+      "Chocolate",
+      "Dog Food (No Taurine)",
+      "Grapes/Raisins"
+    ]
+  },
+  "breed_specific_data": [
+    {
+      "id": 1,
+      "breed": "Maine Coon",
+      "size_category": "Large/Giant",
+      "lifespan": "12-15 years",
+      "dietary_needs": {
+        "food_type": "High-protein, large kibble",
+        "feeding_schedule": "Free-feeding or 2-3 meals",
+        "nutritional_focus": "Taurine, Omega-3s, Joint Support"
+      },
+      "health_issues": {
+        "genetic_predispositions": ["HCM (Heart)", "Hip Dysplasia", "SMA"],
+        "watch_signs": "Labored breathing, limping."
+      },
+      "care_info": {
+        "exercise_needs": "Moderate. Loves fetch.",
+        "grooming": "High (2-3x weekly brushing)",
+        "temperament": "Gentle Giant, dog-like.",
+        "lifestyle": {
+          "indoor_outdoor": "Indoor preferred (theft risk)",
+          "shedding_level": "High",
+          "compatibility": {
+            "children": "Excellent",
+            "other_pets": "Excellent"
+          },
+          "ideal_owner": "Families & Multi-pet homes"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "breed": "Siamese",
+      "size_category": "Medium",
+      "lifespan": "15-20 years",
+      "dietary_needs": {
+        "food_type": "High quality wet food",
+        "feeding_schedule": "2-3 meals",
+        "nutritional_focus": "Lean protein"
+      },
+      "health_issues": {
+        "genetic_predispositions": ["Amyloidosis", "Asthma", "Dental disease"],
+        "watch_signs": "Coughing, squinting eyes."
+      },
+      "care_info": {
+        "exercise_needs": "High. Needs vertical space.",
+        "grooming": "Low.",
+        "temperament": "Vocal, social, clingy.",
+        "lifestyle": {
+          "indoor_outdoor": "Indoor only (vocal/escape artist)",
+          "shedding_level": "Low",
+          "compatibility": {
+            "children": "Good (if respectful)",
+            "other_pets": "Good (needs a buddy)"
+          },
+          "ideal_owner": "Active owners who are home often"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "breed": "Persian",
+      "size_category": "Medium/Large",
+      "lifespan": "12-17 years",
+      "dietary_needs": {
+        "food_type": "Easy-to-eat shape (flat face)",
+        "feeding_schedule": "2 meals",
+        "nutritional_focus": "Hairball control, Kidney support"
+      },
+      "health_issues": {
+        "genetic_predispositions": ["PKD (Kidney)", "Breathing issues", "Eye discharge"],
+        "watch_signs": "Excessive tearing, loud breathing."
+      },
+      "care_info": {
+        "exercise_needs": "Low. Lounger.",
+        "grooming": "Very High (Daily brushing + eye wiping)",
+        "temperament": "Calm, affectionate.",
+        "lifestyle": {
+          "indoor_outdoor": "Strictly Indoor (coat/health)",
+          "shedding_level": "High",
+          "compatibility": {
+            "children": "Good (quiet older kids)",
+            "other_pets": "Moderate"
+          },
+          "ideal_owner": "Quiet homes, Seniors"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "breed": "Bengal",
+      "size_category": "Medium/Large",
+      "lifespan": "12-16 years",
+      "dietary_needs": {
+        "food_type": "High protein/energy",
+        "feeding_schedule": "Puzzle toys",
+        "nutritional_focus": "High calories, Taurine"
+      },
+      "health_issues": {
+        "genetic_predispositions": ["HCM (Heart)", "Patellar Luxation", "Anemia"],
+        "watch_signs": "Cloudy eyes, skipping steps."
+      },
+      "care_info": {
+        "exercise_needs": "Very High (Cat wheels/Leash)",
+        "grooming": "Low.",
+        "temperament": "Wild energy, intelligent.",
+        "lifestyle": {
+          "indoor_outdoor": "Indoor with Leash Training",
+          "shedding_level": "Low",
+          "compatibility": {
+            "children": "Good (active kids)",
+            "other_pets": "Selectively (can be dominant)"
+          },
+          "ideal_owner": "Experienced/Active owners"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "breed": "Ragdoll",
+      "size_category": "Large",
+      "lifespan": "12-15 years",
+      "dietary_needs": {
+        "food_type": "Weight management",
+        "feeding_schedule": "2 meals",
+        "nutritional_focus": "Urinary health, Hairball control"
+      },
+      "health_issues": {
+        "genetic_predispositions": ["HCM (Heart)", "Bladder Stones"],
+        "watch_signs": "Straining to urinate, lethargy."
+      },
+      "care_info": {
+        "exercise_needs": "Low/Moderate.",
+        "grooming": "Moderate.",
+        "temperament": "Floppy, docile.",
+        "lifestyle": {
+          "indoor_outdoor": "Indoor only (too trusting/naive)",
+          "shedding_level": "Moderate",
+          "compatibility": {
+            "children": "Excellent",
+            "other_pets": "Excellent"
+          },
+          "ideal_owner": "Families, First-time owners"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "breed": "Sphynx",
+      "size_category": "Medium",
+      "lifespan": "10-14 years",
+      "dietary_needs": {
+        "food_type": "High calorie",
+        "feeding_schedule": "Frequent meals",
+        "nutritional_focus": "High fat (thermoregulation)"
+      },
+      "health_issues": {
+        "genetic_predispositions": ["HCM", "Skin conditions", "Sunburn"],
+        "watch_signs": "Greasy skin, bad breath."
+      },
+      "care_info": {
+        "exercise_needs": "High. Acrobatic.",
+        "grooming": "High (Weekly baths for oil)",
+        "temperament": "Velcro cat, extroverted.",
+        "lifestyle": {
+          "indoor_outdoor": "Strictly Indoor (temp sensitive)",
+          "shedding_level": "None (Oily skin)",
+          "compatibility": {
+            "children": "Good",
+            "other_pets": "Good"
+          },
+          "ideal_owner": "Dedicated owners (grooming needs)"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "breed": "Scottish Fold",
+      "size_category": "Medium",
+      "lifespan": "11-14 years",
+      "dietary_needs": {
+        "food_type": "Balanced adult",
+        "feeding_schedule": "Controlled portions",
+        "nutritional_focus": "Joint support (Glucosamine)"
+      },
+      "health_issues": {
+        "genetic_predispositions": ["Osteochondrodysplasia", "Arthritis"],
+        "watch_signs": "Stiff tail, reluctance to jump."
+      },
+      "care_info": {
+        "exercise_needs": "Low.",
+        "grooming": "Moderate (check ears).",
+        "temperament": "Sweet, quiet.",
+        "lifestyle": {
+          "indoor_outdoor": "Indoor",
+          "shedding_level": "Moderate",
+          "compatibility": {
+            "children": "Good",
+            "other_pets": "Good"
+          },
+          "ideal_owner": "Quiet homes"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "breed": "British Shorthair",
+      "size_category": "Medium/Large",
+      "lifespan": "12-17 years",
+      "dietary_needs": {
+        "food_type": "Weight control",
+        "feeding_schedule": "Strict meal times",
+        "nutritional_focus": "L-Carnitine (metabolism)"
+      },
+      "health_issues": {
+        "genetic_predispositions": ["HCM", "Hemophilia B", "PKD"],
+        "watch_signs": "Shortness of breath."
+      },
+      "care_info": {
+        "exercise_needs": "Low.",
+        "grooming": "Low (Dense coat).",
+        "temperament": "Independent, easy-going.",
+        "lifestyle": {
+          "indoor_outdoor": "Indoor preferred",
+          "shedding_level": "Moderate",
+          "compatibility": {
+            "children": "Good",
+            "other_pets": "Good"
+          },
+          "ideal_owner": "Working singles, Families"
+        }
+      }
+    }
+  ]
+}

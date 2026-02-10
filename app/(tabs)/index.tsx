@@ -1,98 +1,131 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+import { router } from 'expo-router';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
 
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+      <Text style={styles.brand}>PetCare+</Text>
+      <Text style={styles.tagline}>
+        Trusted guidance for everyday pet health
+      </Text>
+
+      <View style={styles.highlight}>
+        <Text style={styles.highlightTitle}>Emergency Care</Text>
+        <Text style={styles.highlightText}>
+          Learn what to do before reaching a veterinarian.
+        </Text>
+        <TouchableOpacity onPress={() => router.push('../emergency')}>
+          <Text style={styles.highlightAction}>View emergency steps →</Text>
+        </TouchableOpacity>
+      </View>
+
+      <Text style={styles.sectionTitle}>Care Guides</Text>
+
+      <TouchableOpacity style={styles.card} onPress={() => router.push('../dog')}>
+        <Text style={styles.cardTitle}>Dog Care</Text>
+        <Text style={styles.cardDesc}>
+          Diet, vaccination, exercise and hygiene
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.card} onPress={() => router.push('../cat')}>
+        <Text style={styles.cardTitle}>Cat Care</Text>
+        <Text style={styles.cardDesc}>
+          Nutrition, grooming and indoor health
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.card} onPress={() => router.push('../nearby')}>
+        <Text style={styles.cardTitle}>Nearby Pet Care</Text>
+        <Text style={styles.cardDesc}>
+          Find veterinary clinics using Google Maps
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.card} onPress={() => router.push('../about')}>
+        <Text style={styles.cardTitle}>About PetCare+</Text>
+        <Text style={styles.cardDesc}>
+          Purpose, vision and technology used
+        </Text>
+      </TouchableOpacity>
+
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  container: {
+    flex: 1,
+    backgroundColor: '#F4F6FB', // soft app background
+    paddingHorizontal: 20,
+    paddingTop: 60,
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+
+  brand: {
+    fontSize: 34,
+    fontWeight: '700',
+    color: '#4F46E5', // Zepto / Flipkart style indigo
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+
+  tagline: {
+    fontSize: 15,
+    color: '#64748B',
+    marginTop: 6,
+    marginBottom: 30,
+  },
+
+  // Emergency highlight (accent color)
+  highlight: {
+    backgroundColor: '#ECFEF3', // soft green background
+    borderRadius: 20,
+    padding: 20,
+    marginBottom: 30,
+  },
+
+  highlightTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#16A34A', // green = health
+  },
+
+  highlightText: {
+    fontSize: 14,
+    color: '#475569',
+    marginVertical: 8,
+  },
+
+  highlightAction: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#15803D',
+  },
+
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#1E293B',
+    marginBottom: 16,
+  },
+
+  // Cards (Flipkart-like white cards)
+  card: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 18,
+    padding: 20,
+    marginBottom: 16,
+    elevation: 4,
+  },
+
+  cardTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#0F172A',
+  },
+
+  cardDesc: {
+    fontSize: 14,
+    color: '#64748B',
+    marginTop: 6,
   },
 });
